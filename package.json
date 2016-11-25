@@ -1,0 +1,17 @@
+{
+  "name": "starter-node-angular",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.5.1",
+    "body-parser": "~1.4.2",
+    "bower": "latest"
+  },
+  "scripts": {
+  	"start" : "node server.js",
+    "postinstall" : "bower cache clean && bower install"
+  },
+  "repository" : {
+  	"type" : "git",
+  	"url" : "https://github.com/yoniihdc/tinyUrl.git"
+  }
+}

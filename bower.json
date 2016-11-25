@@ -1,0 +1,25 @@
+{
+  "name": "starter-node-angular",
+  "description": "nothing",
+  "main": "server.js",
+  "authors": [
+    "Jonathan Peraza Feliciano <jperazafeliciano@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bower",
+    "node",
+    "heroku"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0"
+  }
+}
