@@ -6,6 +6,3 @@ module.exports = mongoose.model('Url', {
 	ShortUrl: 	{type: String, default: ''},
 });
 
-module.exports = mongoose.model('Counter', {
-	lastIndex: {type: Number}
-});

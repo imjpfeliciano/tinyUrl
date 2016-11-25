@@ -42,9 +42,7 @@ tinyurl.controller('listCtrl', function ($scope, $http) {
 		var url = $('#nurl').val();
 		$('#nurl').val('');
 
-		$http.post('/api/list', {url: url}).then(function(result){
-
-		});	
+		$http.post('/api/list', {url: url});
 
 		$scope.getURLList();
 	};
