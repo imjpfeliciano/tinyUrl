@@ -1,5 +1,4 @@
 'use strict';
-//creamos el modulo ferreteria
 var tinyurl = angular.module('tinyurl', ['ngRoute']);
 
 tinyurl.config(function($routeProvider){
@@ -32,9 +31,24 @@ tinyurl.controller('homeCtrl', function ($scope, $route) {
 tinyurl.controller('listCtrl', function ($scope, $http) {
 	$scope.title = 'Lista de URLs';
 
-	$http.get('/list').then(function(res){
-		$scope.list = res.data;
-	});
+	$scope.getURLList = function() {
+		$http.get('/list').then(function(result){
+			$scope.list = result.data;
+		});
+	};
+
+	$scope.createShortUrl = function() {
+		console.log('Enter to short url function');
+		var url = $('#nurl').val();
+		$('#nurl').val('');
+
+		$http.post('/list', {url: url}).then(function(result){
+
+		});	
+
+		$scope.getURLList();
+	};
 });
+
 
 

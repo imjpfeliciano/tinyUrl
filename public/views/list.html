@@ -1,4 +1,29 @@
 <br>
 <center><h1>{{title}}</h1></center>
 
-{{list}}
+<table class="table" ng-init="getURLList()">
+	<thead>
+	  <tr>
+	    <th>ID</th>
+	    <th>Long Url</th>
+	    <th>Short Url</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr ng-repeat="item in list">
+	    <td>{{item.id}}</td>
+	    <td>{{item.nurl}}</td>
+	    <td>{{item.surl}}</td>
+	  </tr>
+	</tbody>
+</table>
+
+<hr>
+<center><h1>Generar nueva URL</h1></center>
+
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="URL nueva" id="nurl">
+  <span class="input-group-btn">
+    <button class="btn btn-secondary" type="button" ng-click="createShortUrl()">Crear!</button>
+  </span>
+</div>
