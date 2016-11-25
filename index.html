@@ -1,1 +1,32 @@
-Hola mundo
+<!doctype html>
+<html lang="en" ng-app="tinyurl">
+  <head>
+    <meta charset="utf-8">
+    <title>Tiny Url</title>
+	
+	
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+  
+    <nav class="navbar navbar-dark bg-inverse">
+      
+        <ul class="nav navbar-nav" ng-controller="tabsCtrl">
+          <li class="nav-item" ng-class="{active: isActive('/')}"><a class="nav-link" href="#/">Home</a></li>
+          <li class="nav-item" ng-class="{active: isActive('/list')}"><a class="nav-link" href="#/list">Lista de URLs</a></li>
+        </ul>
+      
+    </nav>
+  
+
+    <div ng-view></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
